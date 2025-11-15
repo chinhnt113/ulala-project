@@ -24,9 +24,26 @@ const CalculatorWrapper = styled.div`
     margin: 0;
   }
 
-  .calculator-title {
+  .calculator-header {
     text-align: center;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .calculator-logo {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+      max-width: 200px;
+    }
+  }
+
+  .calculator-title {
     color: #333;
     font-size: 2.5rem;
     font-weight: 700;
@@ -34,6 +51,7 @@ const CalculatorWrapper = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin: 0;
   }
 
   .calculator-content {
@@ -74,6 +92,29 @@ const CalculatorWrapper = styled.div`
     border-top: 1px solid #e0e0e0;
     color: #666;
     font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .footer-logo {
+      max-width: 150px;
+      height: auto;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .footer-credit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
 
     a {
       color: #667eea;
@@ -113,7 +154,10 @@ export const Calculator = () => {
 
   return (
     <CalculatorWrapper>
-      <h1 className="calculator-title">Plant Price Calculator</h1>
+      <div className="calculator-header">
+        <img src="/logo.png" alt="Ulala Idle Adventure" className="calculator-logo" />
+        <h1 className="calculator-title">Plant Price Calculator</h1>
+      </div>
       <div className="calculator-content">
         <div className="calculator-inputs">
           <PlantSelector
@@ -136,7 +180,10 @@ export const Calculator = () => {
         </div>
       </div>
       <div className="credit-footer">
-        Created by <a href="https://discord.com/users/.urghhh" target="_blank" rel="noopener noreferrer">@.urghhh</a>
+        <img src="/logo.png" alt="Ulala Idle Adventure" className="footer-logo" />
+        <div className="footer-credit">
+          Created by <a href="https://discord.com/users/.urghhh" target="_blank" rel="noopener noreferrer">@.urghhh</a>
+        </div>
       </div>
     </CalculatorWrapper>
   );
