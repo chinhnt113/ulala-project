@@ -66,6 +66,27 @@ const CalculatorWrapper = styled.div`
       margin: 0;
     }
   }
+
+  .credit-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+    color: #666;
+    font-size: 0.9rem;
+
+    a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #764ba2;
+        text-decoration: underline;
+      }
+    }
+  }
 `;
 
 export const Calculator = () => {
@@ -113,6 +134,9 @@ export const Calculator = () => {
             hasValidInputs={!!selectedPlant && weight > 0}
           />
         </div>
+      </div>
+      <div className="credit-footer">
+        Created by <a href="https://discord.com/users/.urghhh" target="_blank" rel="noopener noreferrer">@.urghhh</a>
       </div>
     </CalculatorWrapper>
   );

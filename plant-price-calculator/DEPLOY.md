@@ -2,54 +2,42 @@
 
 ## Quick Deploy to GitHub Pages
 
-### Step 1: Create GitHub Repository
+**Repository**: `https://github.com/chinhnt113/ulala-project`
 
-1. Go to https://github.com/new
-2. Repository name: `plant-price-calculator`
-3. **Important**: Do NOT check "Add a README file", "Add .gitignore", or "Choose a license"
-4. Click "Create repository"
+### Step 1: Deploy to GitHub Pages
 
-### Step 2: Initialize Git and Push Code
+**✅ Đã deploy thành công!**
+
+Để deploy lại sau khi có thay đổi, chạy:
 
 ```bash
 cd plant-price-calculator
-git init
-git add .
-git commit -m "Initial commit: Plant Price Calculator"
-git branch -M main
-git remote add origin https://github.com/[YOUR_USERNAME]/plant-price-calculator.git
-git push -u origin main
-```
-
-**Replace `[YOUR_USERNAME]` with your GitHub username**
-
-### Step 3: Deploy to GitHub Pages
-
-```bash
 npm run deploy
 ```
 
-This command will:
-- Build the production bundle (`npm run build`)
-- Deploy to `gh-pages` branch automatically
-- Create/update the `gh-pages` branch with the `dist` folder contents
+Lệnh này sẽ:
+- Build production bundle (`npm run build`)
+- Tự động tạo/update branch `gh-pages`
+- Push `dist` folder lên GitHub
 
-### Step 4: Enable GitHub Pages
+### Step 2: Enable GitHub Pages
 
-1. Go to your repository on GitHub
-2. Click **Settings** tab
-3. Scroll down to **Pages** section (left sidebar)
-4. Under **Source**, select:
+1. Vào repository: https://github.com/chinhnt113/ulala-project
+2. Click tab **Settings**
+3. Scroll xuống phần **Pages** (sidebar bên trái)
+4. Trong phần **Source**, chọn:
    - Branch: `gh-pages`
    - Folder: `/ (root)`
 5. Click **Save**
 
-### Step 5: Access Your App
+### Step 3: Access Your App
 
-After a few minutes, your app will be available at:
+Sau vài phút, app sẽ có tại:
 ```
-https://[YOUR_USERNAME].github.io/plant-price-calculator/
+https://chinhnt113.github.io/ulala-project/
 ```
+
+**Lưu ý**: Có thể mất 1-5 phút để GitHub Pages cập nhật sau khi deploy.
 
 **Note**: It may take 1-5 minutes for GitHub Pages to update after deployment.
 
