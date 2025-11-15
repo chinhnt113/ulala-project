@@ -10,6 +10,9 @@ import { TraitSelector } from './TraitSelector';
 import { PriceDisplay } from './PriceDisplay';
 import { calculatePrice } from '../utils/priceCalculator';
 
+// Import logo to handle base path correctly
+const logoUrl = `${import.meta.env.BASE_URL}logo.png`;
+
 const CalculatorWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -155,7 +158,7 @@ export const Calculator = () => {
   return (
     <CalculatorWrapper>
       <div className="calculator-header">
-        <img src="/logo.png" alt="Ulala Idle Adventure" className="calculator-logo" />
+        <img src={logoUrl} alt="Ulala Idle Adventure" className="calculator-logo" />
         <h1 className="calculator-title">Plant Price Calculator</h1>
       </div>
       <div className="calculator-content">
@@ -180,7 +183,7 @@ export const Calculator = () => {
         </div>
       </div>
       <div className="credit-footer">
-        <img src="/logo.png" alt="Ulala Idle Adventure" className="footer-logo" />
+        <img src={logoUrl} alt="Ulala Idle Adventure" className="footer-logo" />
         <div className="footer-credit">
           Created by <a href="https://discord.com/users/.urghhh" target="_blank" rel="noopener noreferrer">@.urghhh</a>
         </div>
