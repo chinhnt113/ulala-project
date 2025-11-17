@@ -18,6 +18,7 @@ export function calculatePrice(
   mutation: MutationType,
   selectedTraits: string[]
 ): number {
+  console.log('calculatePrice', basePrice, weight, mutation, selectedTraits);
   // Validate inputs
   if (basePrice <= 0 || weight <= 0) {
     return 0;

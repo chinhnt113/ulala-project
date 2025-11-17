@@ -74,6 +74,7 @@ const TraitSelectorWrapper = styled.div`
 
 export const TraitSelector = ({ selectedTraits, onTraitsChange }: TraitSelectorProps) => {
   const handleTraitToggle = (traitName: string) => {
+    console.log('traitName', traitName);
     if (selectedTraits.includes(traitName)) {
       onTraitsChange(selectedTraits.filter((t) => t !== traitName));
     } else {
@@ -95,8 +96,11 @@ export const TraitSelector = ({ selectedTraits, onTraitsChange }: TraitSelectorP
               type="checkbox"
               id={`trait-${trait.name}`}
               checked={selectedTraits.includes(trait.name)}
-              onChange={() => {}} // Controlled by div onClick
-              onClick={(e) => e.stopPropagation()}
+              onChange={() => {}}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleTraitToggle(trait.name);
+              }}
               readOnly
             />
             <label 
